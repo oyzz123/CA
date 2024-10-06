@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.campus.mapper.UserMapper">
+
+    <update id="update" parameterType="User">
+        update user
+        <set>
+            <if test="nickname != null">nickname = #{nickname},</if>
+            <if test="account != null">account = #{account},</if>
+            <if test="password != null">password = #{password},</if>
+            <if test="gender != null">gender = #{gender},</if>
+            <if test="age != null">age = #{age},</if>
+            <if test="telephone != null">telephone = #{telephone},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="wallet != null">wallet = wallet + #{wallet},</if>
+            <if test="riderWallet != null">rider_wallet = rider_wallet + #{riderWallet},</if>
+            <if test="updateTime != null">update_time=#{updateTime},</if>
+            <if test="createTime != null">create_time=#{createTime},</if>
+            <if test="updateUser != null">update_user=#{updateUser},</if>
+            <if test="createUser != null">create_user=#{createUser}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="pay">
+        update user
+        <set>
+            <if test="wallet != null">wallet = wallet - #{wallet}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+<!--    <update id="payVoucher">-->
+<!--        update user-->
+<!--        <set>-->
+<!--            <if test = "wallet != null">-->
+<!--                wallet = wallet - #{wallet}-->
+<!--            </if>-->
+<!--        </set>-->
+<!--    </update>-->
+
+
+</mapper>

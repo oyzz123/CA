@@ -1,0 +1,24 @@
+campus:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: campus_aides
+    username: root
+    password: 123456
+  alioss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: LTAI5tMGPVnrfpBAm4aJBXuK
+    access-key-secret: yk4IONdASun6jWSC8sdZWKL68pZSCJ
+    bucket-name: rzrzrz
+
+  redis:
+    host: 47.99.155.68
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: 100

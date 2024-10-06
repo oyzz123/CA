@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.campus.mapper.BossVoucherMapper">
+
+    <insert id="save">
+        insert into voucher (pay_money, enough_money, money, num, type, status, start_time, end_time, expire_time)
+            VALUES
+                (#{payMoney}, #{enoughMoney}, #{money}, #{num}, #{type},#{status}, #{startTime}, #{endTime}, #{expireTime})
+    </insert>
+    <update id="update">
+        update voucher
+        <set>
+            <if test="payMoney != null">
+                pay_money = #{payMoney}
+            </if>
+            <if test="enoughMoney != null">
+                enough_money = #{enoughMoney}
+            </if>
+            <if test="money != null">
+                money = #{money}
+            </if>
+            <if test="num != null">
+                num = #{num}
+            </if>
+            <if test="type != null">
+                type = #{type}
+            </if>
+            <if test="status != null">
+                status = #{status}
+            </if>
+            <if test="startTime != null">
+                start_time = #{startTime}
+            </if>
+            <if test="endTime != null">
+                end_time = #{endTime}
+            </if>
+            <if test="expireTime != null">
+                expire_time = #{expireTime}
+            </if>
+        </set>
+    </update>
+</mapper>

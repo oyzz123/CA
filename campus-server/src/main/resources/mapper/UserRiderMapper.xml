@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.campus.mapper.UserRiderMapper">
+
+    <select id="selectAll" resultType="com.vo.OrderVo">
+        select to1.id,to1.address_start,to1.address_end,to1.rider_id,to1.user_id,to1.money,to1.status,to1.type,to1.notes,u.telephone
+            from takeaway_order as to1  inner join user u
+            on to1.user_id = u.id
+        where to1.status = 0 and to1.user_id != #{userId}
+    </select>
+
+
+    <select id="showRiderOrder" resultType="com.vo.OrderVo">
+        select to2.id,to2.address_end,to2.address_start,to2.rider_id,to2.user_id,to2.money,to2.status,to2.type,to2.notes,u.telephone
+        from takeaway_order to2
+        inner join user u
+        on to2.user_id = u.id
+        where rider_id = #{userId}
+    </select>
+
+
+
+</mapper>

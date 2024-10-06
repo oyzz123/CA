@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.campus.mapper.AdminBossMapper">
+<!--    <resultMap id="bossResultMap" type="com.entity.Boss">-->
+<!--        &lt;!&ndash;-->
+<!--              result：完成一般字段映射-->
+<!--              column:列名-->
+<!--              property：实体类名-->
+<!--              &ndash;&gt;-->
+<!--        <result column="create_user" property="createUser"/>-->
+<!--        <result column="create_time" property="createTime"/>-->
+<!--        <result column="update_user" property="updateUser"/>-->
+<!--        <result column="update_time" property="updateTime"/>-->
+<!--    </resultMap>-->
+
+    <update id="update" parameterType="Boss">
+        update boss
+        <set>
+            <if test="nickname!=null">
+                nickname=#{nickname},
+            </if>
+            <if test="account!=null">
+                account=#{account},
+            </if>
+            <if test="password!=null ">
+                password=#{password},
+            </if>
+            <if test="age!=null" >
+                age=#{age},
+            </if>
+            <if test="telephone!=null">
+                telephone=#{telephone},
+            </if>
+            <if test="status!=null">
+                status=#{status},
+            </if>
+            <if test="gender!=null">
+                gender=#{gender},
+            </if>
+            <if test="updateUser!=null">
+                update_user=#{updateUser},
+            </if>
+            <if test="updateTime!=null">
+                update_time=#{updateTime}
+            </if>
+        </set>
+        where
+        id=#{id}
+    </update>
+    <select id="pageQuery" resultType="com.entity.Boss">
+        select * from boss
+        <where>
+            <if test="nickname!=null and nickname!=''">
+                and nickname like concat('%',#{nickname},'%')
+            </if>
+        </where>
+        order by create_time desc
+    </select>
+
+
+
+</mapper>

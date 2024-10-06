@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.campus.mapper.BossMapper">
+<!--    <resultMap id="UserResultMap" type="com.entity.Commodity">-->
+<!--        <id property="commodityClassId" column="commodity_class_id"/>-->
+<!--        <result property="commodityName" column="commodity_name"/>-->
+<!--        &lt;!&ndash; 其他字段映射 &ndash;&gt;-->
+<!--    </resultMap>-->
+    <select id="pageQuery" resultType="com.entity.Commodity">
+        select * from commodity where status = 1
+        order by create_time desc
+    </select>
+    <select id="UserPageQuery" resultType="com.vo.UserOrderVo">
+        SELECT
+            takeaway_order.id,
+            takeaway_order.address_start,
+            takeaway_order.address_end,
+            takeaway_order.money,
+            takeaway_order.status,
+            takeaway_order.type,
+            takeaway_order.notes,
+            takeaway_order.create_time,
+            user.telephone as userTelephone,
+            user.nickname as userNickname,
+            rider.nickname as riderNickname,
+            rider.telephone as riderTelephone,
+            complaints.message
+        FROM
+            takeaway_order
+        JOIN user ON takeaway_order.user_id = user.id
+        JOIN user as rider ON takeaway_order.rider_id = rider.id
+        JOIN complaints on takeaway_order.id = complaints.orders_id
+        where takeaway_order.status = 4
+    </select>
+    <select id="RiderPageQuery" resultType="com.vo.UserOrderVo">
+        SELECT
+        takeaway_order.id,
+        takeaway_order.address_start,
+        takeaway_order.address_end,
+        takeaway_order.money,
+        takeaway_order.status,
+        takeaway_order.type,
+        takeaway_order.notes,
+        takeaway_order.create_time,
+        user.telephone as userTelephone,
+        user.nickname as userNickname,
+        rider.nickname as riderNickname,
+        rider.telephone as riderTelephone,
+        complaints_rider.message
+        FROM
+        takeaway_order
+        JOIN user ON takeaway_order.user_id = user.id
+        JOIN user as rider ON takeaway_order.rider_id = rider.id
+        JOIN complaints_rider on takeaway_order.id = complaints_rider.order_id
+        where takeaway_order.status = 6
+    </select>
+
+    <update id="Update" parameterType="com.dto.CommodityDto">
+        update commodity
+        <set>
+            <if test="commodityName != null">commodity_name = #{commodityName},</if>
+            <if test="price != null">price = #{price},</if>
+            <if test="allowance != null">allowance = #{allowance},</if>
+            <if test="weight != null"> weight = #{weight},</if>
+            <if test="photoPath != null"> photo_path = #{photoPath},</if>
+            <if test="commodityClassId != null"> commodity_class_id = #{commodityClassId},</if>
+            <if test="status != null"> status = #{status}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--    <update id="update">-->
+<!--        update takeaway_order-->
+<!--        <set>-->
+<!--            <if test="status != null"> status = #{status} </if>-->
+<!--        </set>-->
+<!--        where id = #{id}-->
+<!--    </update>-->
+
+<!--    <select id="showOrder" resultType="com.vo.OrderVo">-->
+<!--        select address_start,address_end,rider_id,user_id,money,status,type,notes from takeaway_order-->
+<!--        <where>-->
+<!--            <if test="userId != null"> user_id = #{userId}</if>-->
+<!--        </where>-->
+<!--        order by create_time desc-->
+<!--    </select>-->
+    <select id="shopOrderQuery" resultType="com.vo.ShopOrderVo">
+        SELECT
+        shopping_order.id,
+        shopping_order.commodities,
+        shopping_order.address_end,
+        shopping_order.money,
+        shopping_order.status,
+        shopping_order.notes,
+        shopping_order.create_time,
+        user.nickname,
+        user.telephone
+        FROM
+        shopping_order
+        LEFT JOIN
+        user ON shopping_order.user_id = user.id
+    </select>
+
+
+    <select id="takeawayOrderQuery" resultType="com.vo.TakeawayOrderVo">
+        SELECT
+        takeaway_order.id,
+        takeaway_order.address_start,
+        takeaway_order.address_end,
+        takeaway_order.money,
+        takeaway_order.status,
+        takeaway_order.type,
+        takeaway_order.notes,
+        takeaway_order.create_time,
+        user.telephone as userTelephone,
+        user.nickname as userNickname,
+        rider.nickname as riderNickname,
+        rider.telephone as riderTelephone
+        FROM
+        takeaway_order
+        JOIN user ON takeaway_order.user_id = user.id
+        JOIN user as rider ON takeaway_order.rider_id = rider.id
+    </select>
+
+    <update id="UpdateBoss">
+        update boss
+        <set>
+            <if test="nickname!=null">
+                nickname=#{nickname},
+            </if>
+            <if test="account!=null">
+                account=#{account},
+            </if>
+            <if test="password!=null ">
+                password=#{password},
+            </if>
+            <if test="age!=null and age!= 0" >
+                age=#{age},
+            </if>
+            <if test="telephone!=null">
+                telephone=#{telephone},
+            </if>
+            <if test="status!=null">
+                status=#{status},
+            </if>
+            <if test="gender!=null">
+                gender=#{gender},
+            </if>
+            <if test="updateUser!=null">
+                update_user=#{updateUser},
+            </if>
+            <if test="updateTime!=null">
+                update_time=#{updateTime}
+            </if>
+        </set>
+        where
+        id=#{id}
+    </update>
+
+    <select id="searchItem" resultType="com.entity.Commodity">
+        select * from commodity
+        <where>
+            <if test="commodityName!=null and commodityName!=''">
+                and commodity_name like concat('%',#{commodityName},'%')
+            </if>
+            and status = 1
+        </where>
+        order by create_time desc
+    </select>
+</mapper>

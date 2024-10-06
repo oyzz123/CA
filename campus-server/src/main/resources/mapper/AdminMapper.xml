@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.campus.mapper.AdminMapper">
+<!--    <resultMap id="adminResultMap" type="com.entity.Admin">-->
+<!--        &lt;!&ndash;-->
+<!--              result：完成一般字段映射-->
+<!--              column:列名-->
+<!--              property：实体类名-->
+<!--              &ndash;&gt;-->
+<!--        <result column="create_user" property="createUser"/>-->
+<!--        <result column="create_time" property="createTime"/>-->
+<!--        <result column="update_user" property="updateUser"/>-->
+<!--        <result column="update_time" property="updateTime"/>-->
+<!--    </resultMap>-->
+    <update id="update">
+        update admin
+        <set>
+            <if test="nickname!=null">
+                nickname=#{nickname},
+            </if>
+            <if test="account!=null">
+                account=#{account},
+            </if>
+            <if test="password!=null ">
+                password=#{password},
+            </if>
+            <if test="age!=null" >
+                age=#{age},
+            </if>
+            <if test="telephone!=null">
+                telephone=#{telephone},
+            </if>
+            <if test="createUser!=null">
+                create_user=#{createUser},
+            </if>
+            <if test="createTime!=null">
+                create_time=#{createTime},
+            </if>
+            <if test="updateUser!=null">
+                update_user=#{updateUser},
+            </if>
+            <if test="updateTime!=null">
+                update_time=#{updateTime}
+            </if>
+        </set>
+        where
+        id=#{id}
+    </update>
+</mapper>
