@@ -4,7 +4,7 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.campus.mapper.UserAddressMapper">
 
-    <update id="modifyAddress" parameterType="com.vo.UserAddressVo">
+    <update id="modifyAddress" parameterType="com.campus.vo.UserAddressVo">
         update user_address
         <set>
             <if test="userName!=null">

@@ -1,9 +1,9 @@
 package com.campus.controller.user;
 
 import com.campus.service.user.UserAddressService;
-import com.dto.UserAddressDto;
-import com.entity.UserAddress;
-import com.result.Result;
+import com.campus.dto.UserAddressDto;
+import com.campus.entity.UserAddress;
+import com.campus.result.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

@@ -2,10 +2,10 @@ package com.campus.service.boss.impl;
 
 import com.campus.mapper.BossVoucherMapper;
 import com.campus.service.boss.BossVoucherService;
-import com.dto.VoucherDto;
-import com.entity.Voucher;
-import com.exception.VoucherException;
-import com.result.Result;
+import com.campus.dto.VoucherDto;
+import com.campus.entity.Voucher;
+import com.campus.exception.VoucherException;
+import com.campus.result.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

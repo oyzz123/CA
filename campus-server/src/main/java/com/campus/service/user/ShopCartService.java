@@ -1,7 +1,7 @@
 package com.campus.service.user;
 
-import com.dto.ShopCartDto;
-import com.result.Result;
+import com.campus.dto.ShopCartDto;
+import com.campus.result.Result;
 
 public interface ShopCartService {
     Result addCommodity(ShopCartDto shopCartDto);

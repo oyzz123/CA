@@ -1,8 +1,6 @@
 package com.campus.mapper;
 
-import com.campus.annotation.AutoFill;
-import com.entity.User;
-import com.enumeration.OperationType;
+import com.campus.entity.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

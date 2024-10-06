@@ -1,8 +1,6 @@
 package com.campus.mapper;
 
-import com.campus.annotation.AutoFill;
-import com.entity.Admin;
-import com.enumeration.OperationType;
+import com.campus.entity.Admin;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 

@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.campus.mapper.UserShopMapper">
 
-    <select id = "showCommodity" resultType="com.entity.Commodity">
+    <select id = "showCommodity" resultType="com.campus.entity.Commodity">
         select * from commodity
         <where>
             <if test="className != null and className != ''">
@@ -13,7 +13,7 @@
         order by create_time desc
     </select>
 
-    <select id="showShopOrder" resultType="com.vo.UserShopOrderVo">
+    <select id="showShopOrder" resultType="com.campus.vo.UserShopOrderVo">
         select * from shopping_order
         <where>
             <if test = "userId != null"> user_id = #{userId} </if>

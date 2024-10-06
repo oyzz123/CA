@@ -49,7 +49,7 @@
         where
         id=#{id}
     </update>
-    <select id="pageQuery" resultType="com.entity.Boss">
+    <select id="pageQuery" resultType="com.campus.entity.Boss">
         select * from boss
         <where>
             <if test="nickname!=null and nickname!=''">

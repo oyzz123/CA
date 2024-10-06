@@ -1,12 +1,11 @@
 package com.campus.service.boss;
 
+import com.campus.dto.*;
 import com.dto.*;
-import com.entity.Boss;
-import com.entity.Commodity;
-import com.entity.ShopOrder;
-import com.entity.UserOrder;
-import com.result.PageResult;
-import com.vo.ClassificationVo;
+import com.campus.entity.Boss;
+import com.campus.entity.Commodity;
+import com.campus.result.PageResult;
+import com.campus.vo.ClassificationVo;
 
 import java.util.List;
 
@@ -48,7 +47,7 @@ public interface BossService {
 
     List<ClassificationVo> selectClass();
 
-    List<com.vo.ClassificationVo> getidname();
+    List<ClassificationVo> getidname();
 
     PageResult shopOrderQuery(BossShoppingOrderVo bossShoppingOrderVo);
 

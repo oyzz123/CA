@@ -1,10 +1,8 @@
 package com.campus.mapper;
 
 
-import com.campus.annotation.AutoFill;
-import com.dto.AdminUserPageDto;
-import com.entity.User;
-import com.enumeration.OperationType;
+import com.campus.dto.AdminUserPageDto;
+import com.campus.entity.User;
 import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Select;

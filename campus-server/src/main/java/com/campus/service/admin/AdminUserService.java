@@ -1,10 +1,10 @@
 package com.campus.service.admin;
 
-import com.dto.AdminUserPageDto;
-import com.dto.AdminUserSaveDto;
-import com.dto.AdminUserUpdateDto;
-import com.entity.User;
-import com.result.PageResult;
+import com.campus.dto.AdminUserPageDto;
+import com.campus.dto.AdminUserSaveDto;
+import com.campus.dto.AdminUserUpdateDto;
+import com.campus.entity.User;
+import com.campus.result.PageResult;
 
 public interface AdminUserService {
     /**

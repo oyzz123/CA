@@ -1,9 +1,7 @@
 package com.campus.mapper;
 
-import com.campus.annotation.AutoFill;
-import com.dto.AdminBossPageDto;
-import com.entity.Boss;
-import com.enumeration.OperationType;
+import com.campus.dto.AdminBossPageDto;
+import com.campus.entity.Boss;
 import com.github.pagehelper.Page;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;

@@ -1,10 +1,9 @@
 package com.campus.controller.admin;
 
 import com.campus.service.admin.AdminService;
-import com.campus.service.admin.impl.AdminServiceImpl;
-import com.dto.AdminUpdateDto;
-import com.entity.Admin;
-import com.result.Result;
+import com.campus.dto.AdminUpdateDto;
+import com.campus.entity.Admin;
+import com.campus.result.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

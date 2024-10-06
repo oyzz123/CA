@@ -1,8 +1,8 @@
 package com.campus.service.boss;
 
-import com.dto.VoucherDto;
-import com.exception.VoucherException;
-import com.result.Result;
+import com.campus.dto.VoucherDto;
+import com.campus.exception.VoucherException;
+import com.campus.result.Result;
 
 public interface BossVoucherService {
     /**

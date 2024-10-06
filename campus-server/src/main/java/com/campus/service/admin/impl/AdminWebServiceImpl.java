@@ -2,8 +2,8 @@ package com.campus.service.admin.impl;
 
 import com.campus.mapper.AdminWebMapper;
 import com.campus.service.admin.AdminWebService;
-import com.constant.OrderTypeConstant;
-import com.vo.AdminQueryVo;
+import com.campus.constant.OrderTypeConstant;
+import com.campus.vo.AdminQueryVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

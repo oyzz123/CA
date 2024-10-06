@@ -1,8 +1,8 @@
 package com.campus.filter;
 
 import com.alibaba.fastjson.JSONObject;
-import com.result.Result;
-import com.utils.JwtUtil;
+import com.campus.result.Result;
+import com.campus.utils.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 

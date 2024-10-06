@@ -7,13 +7,9 @@
         <groupId>com.campus</groupId>
         <artifactId>Campus-Aides</artifactId>
         <version>1.1.0</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <packaging>jar</packaging>
-    <groupId>com.common</groupId>
     <artifactId>campus-common</artifactId>
-    <version>1.1.0</version>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>

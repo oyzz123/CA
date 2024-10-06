@@ -1,9 +1,9 @@
 package com.campus.aspect;
 
 import com.campus.annotation.AutoFill;
-import com.constant.AutoFillConstant;
-import com.context.BaseContext;
-import com.enumeration.OperationType;
+import com.campus.constant.AutoFillConstant;
+import com.campus.context.BaseContext;
+import com.campus.enumeration.OperationType;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Before;

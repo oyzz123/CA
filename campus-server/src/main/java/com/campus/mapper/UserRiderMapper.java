@@ -1,13 +1,11 @@
 package com.campus.mapper;
 
-import com.campus.annotation.AutoFill;
-import com.dto.OrderPageDto;
-import com.dto.RiderAcceptOrderDto;
-import com.dto.RiderRefundOrderDto;
-import com.entity.RiderRefundOrder;
-import com.enumeration.OperationType;
+import com.campus.dto.OrderPageDto;
+import com.campus.dto.RiderAcceptOrderDto;
+import com.campus.dto.RiderRefundOrderDto;
+import com.campus.entity.RiderRefundOrder;
 import com.github.pagehelper.Page;
-import com.vo.OrderVo;
+import com.campus.vo.OrderVo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

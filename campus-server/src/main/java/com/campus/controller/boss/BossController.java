@@ -1,11 +1,12 @@
 package com.campus.controller.boss;
 
+import com.campus.dto.*;
 import com.campus.service.boss.BossService;
 import com.dto.*;
-import com.entity.Commodity;
-import com.result.PageResult;
-import com.result.Result;
-import com.vo.ClassificationVo;
+import com.campus.entity.Commodity;
+import com.campus.result.PageResult;
+import com.campus.result.Result;
+import com.campus.vo.ClassificationVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

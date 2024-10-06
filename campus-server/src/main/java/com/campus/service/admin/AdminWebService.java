@@ -1,6 +1,6 @@
 package com.campus.service.admin;
 
-import com.vo.AdminQueryVo;
+import com.campus.vo.AdminQueryVo;
 
 import java.util.ArrayList;
 

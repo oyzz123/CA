@@ -1,10 +1,9 @@
 package com.campus.service.user;
 
-import com.dto.ComplaintsDto;
-import com.dto.RechargeDto;
-import com.dto.UserDto;
-import com.dto.LoginDto;
-import com.entity.User;
+import com.campus.dto.RechargeDto;
+import com.campus.dto.UserDto;
+import com.campus.dto.LoginDto;
+import com.campus.entity.User;
 
 public interface UserService {
     User login(LoginDto loginDto);

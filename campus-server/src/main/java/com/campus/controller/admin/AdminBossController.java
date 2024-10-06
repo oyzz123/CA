@@ -2,12 +2,12 @@ package com.campus.controller.admin;
 
 import com.campus.service.admin.AdminBossService;
 import com.campus.service.admin.impl.AdminBossServiceImpl;
-import com.dto.AdminBossPageDto;
-import com.dto.AdminBossSaveDto;
-import com.dto.AdminBossUpdateDto;
-import com.entity.Boss;
-import com.result.PageResult;
-import com.result.Result;
+import com.campus.dto.AdminBossPageDto;
+import com.campus.dto.AdminBossSaveDto;
+import com.campus.dto.AdminBossUpdateDto;
+import com.campus.entity.Boss;
+import com.campus.result.PageResult;
+import com.campus.result.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

@@ -1,8 +1,8 @@
 package com.campus.service.user;
 
 
-import com.dto.UserAddressDto;
-import com.entity.UserAddress;
+import com.campus.dto.UserAddressDto;
+import com.campus.entity.UserAddress;
 
 import java.util.ArrayList;
 

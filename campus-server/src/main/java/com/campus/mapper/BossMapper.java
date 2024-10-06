@@ -1,13 +1,16 @@
 package com.campus.mapper;
 
+import com.campus.dto.*;
+import com.campus.entity.Boss;
+import com.campus.entity.Commodity;
+import com.campus.entity.CommodityTest;
 import com.dto.*;
 import com.entity.*;
 import com.github.pagehelper.Page;
-import com.result.PageResult;
-import com.vo.ClassificationVo;
-import com.vo.ShopOrderVo;
-import com.vo.TakeawayOrderVo;
-import com.vo.UserOrderVo;
+import com.campus.vo.ClassificationVo;
+import com.campus.vo.ShopOrderVo;
+import com.campus.vo.TakeawayOrderVo;
+import com.campus.vo.UserOrderVo;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -53,7 +56,7 @@ public interface BossMapper {
     void deAllowance(Integer id, Integer num);
 
    @Select("select * from boss where account = #{account}")
-    Boss getBossByAccount(String account);
+   Boss getBossByAccount(String account);
 
 //   @Update("update boss set nickname = #{nickname},password = #{password},gender = #{gender},telephone = #{telephone}")
     void UpdateBoss(Boss boss);
@@ -68,7 +71,7 @@ public interface BossMapper {
     List<ClassificationVo> ClassPageQuery();
 
     @Select("select id,name from classification")
-    List<com.vo.ClassificationVo> getidname();
+    List<ClassificationVo> getidname();
 
     Page<ShopOrderVo> shopOrderQuery(BossShoppingOrderVo bossShoppingOrderVo);
 

@@ -1,6 +1,6 @@
 package com.campus.mapper;
 
-import com.utils.RedisIdUtil;
+import com.campus.utils.RedisIdUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,7 +8,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 import javax.annotation.Resource;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

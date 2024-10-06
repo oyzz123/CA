@@ -1,11 +1,11 @@
 package com.campus.controller.user;
 
 import com.campus.service.user.UserOrderService;
-import com.dto.OrderPageDto;
-import com.dto.RefundOrderDto;
-import com.dto.UserOrderDto;
-import com.result.PageResult;
-import com.result.Result;
+import com.campus.dto.OrderPageDto;
+import com.campus.dto.RefundOrderDto;
+import com.campus.dto.UserOrderDto;
+import com.campus.result.PageResult;
+import com.campus.result.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

@@ -1,9 +1,8 @@
 package com.campus.controller.admin;
 
 import com.campus.service.admin.AdminWebService;
-import com.campus.service.admin.impl.AdminWebServiceImpl;
-import com.result.Result;
-import com.vo.AdminQueryVo;
+import com.campus.result.Result;
+import com.campus.vo.AdminQueryVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

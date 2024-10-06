@@ -2,10 +2,10 @@ package com.campus.service.user.impl;
 
 import com.campus.mapper.UserAddressMapper;
 import com.campus.service.user.UserAddressService;
-import com.dto.UserAddressDto;
-import com.entity.UserAddress;
-import com.exception.TelephoneException;
-import com.vo.UserAddressVo;
+import com.campus.dto.UserAddressDto;
+import com.campus.entity.UserAddress;
+import com.campus.exception.TelephoneException;
+import com.campus.vo.UserAddressVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

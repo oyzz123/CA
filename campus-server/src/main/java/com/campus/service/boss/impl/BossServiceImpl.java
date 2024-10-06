@@ -1,22 +1,26 @@
 package com.campus.service.boss.impl;
 
 import cn.hutool.json.JSONUtil;
+import com.campus.dto.*;
+import com.campus.entity.Boss;
+import com.campus.entity.Commodity;
+import com.campus.entity.CommodityTest;
 import com.campus.service.boss.BossService;
 import com.campus.mapper.BossMapper;
 import com.dto.*;
 import com.entity.*;
-import com.exception.AccountNotFoundException;
-import com.exception.AccountStatusException;
-import com.exception.CommodityNotFound;
-import com.exception.PasswordErrorException;
+import com.campus.exception.AccountNotFoundException;
+import com.campus.exception.AccountStatusException;
+import com.campus.exception.CommodityNotFound;
+import com.campus.exception.PasswordErrorException;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.xiaoymin.knife4j.core.util.StrUtil;
-import com.result.PageResult;
-import com.vo.ClassificationVo;
-import com.vo.ShopOrderVo;
-import com.vo.TakeawayOrderVo;
-import com.vo.UserOrderVo;
+import com.campus.result.PageResult;
+import com.campus.vo.ClassificationVo;
+import com.campus.vo.ShopOrderVo;
+import com.campus.vo.TakeawayOrderVo;
+import com.campus.vo.UserOrderVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -254,7 +258,7 @@ public class BossServiceImpl implements BossService {
 
 
     @Override
-    public List<com.vo.ClassificationVo> getidname() {
+    public List<ClassificationVo> getidname() {
         return bossMapper.getidname();
     }
 

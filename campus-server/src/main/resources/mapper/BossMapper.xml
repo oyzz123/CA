@@ -7,11 +7,11 @@
 <!--        <result property="commodityName" column="commodity_name"/>-->
 <!--        &lt;!&ndash; 其他字段映射 &ndash;&gt;-->
 <!--    </resultMap>-->
-    <select id="pageQuery" resultType="com.entity.Commodity">
+    <select id="pageQuery" resultType="com.campus.entity.Commodity">
         select * from commodity where status = 1
         order by create_time desc
     </select>
-    <select id="UserPageQuery" resultType="com.vo.UserOrderVo">
+    <select id="UserPageQuery" resultType="com.campus.vo.UserOrderVo">
         SELECT
             takeaway_order.id,
             takeaway_order.address_start,
@@ -33,7 +33,7 @@
         JOIN complaints on takeaway_order.id = complaints.orders_id
         where takeaway_order.status = 4
     </select>
-    <select id="RiderPageQuery" resultType="com.vo.UserOrderVo">
+    <select id="RiderPageQuery" resultType="com.campus.vo.UserOrderVo">
         SELECT
         takeaway_order.id,
         takeaway_order.address_start,
@@ -56,7 +56,7 @@
         where takeaway_order.status = 6
     </select>
 
-    <update id="Update" parameterType="com.dto.CommodityDto">
+    <update id="Update" parameterType="com.campus.dto.CommodityDto">
         update commodity
         <set>
             <if test="commodityName != null">commodity_name = #{commodityName},</if>
@@ -85,7 +85,7 @@
 <!--        </where>-->
 <!--        order by create_time desc-->
 <!--    </select>-->
-    <select id="shopOrderQuery" resultType="com.vo.ShopOrderVo">
+    <select id="shopOrderQuery" resultType="com.campus.vo.ShopOrderVo">
         SELECT
         shopping_order.id,
         shopping_order.commodities,
@@ -103,7 +103,7 @@
     </select>
 
 
-    <select id="takeawayOrderQuery" resultType="com.vo.TakeawayOrderVo">
+    <select id="takeawayOrderQuery" resultType="com.campus.vo.TakeawayOrderVo">
         SELECT
         takeaway_order.id,
         takeaway_order.address_start,
@@ -158,7 +158,7 @@
         id=#{id}
     </update>
 
-    <select id="searchItem" resultType="com.entity.Commodity">
+    <select id="searchItem" resultType="com.campus.entity.Commodity">
         select * from commodity
         <where>
             <if test="commodityName!=null and commodityName!=''">

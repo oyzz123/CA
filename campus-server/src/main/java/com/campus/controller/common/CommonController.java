@@ -1,7 +1,7 @@
 package com.campus.controller.common;
 
-import com.result.Result;
-import com.utils.AliOssUtil;
+import com.campus.result.Result;
+import com.campus.utils.AliOssUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

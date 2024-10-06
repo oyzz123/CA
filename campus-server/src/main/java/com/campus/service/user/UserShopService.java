@@ -1,10 +1,11 @@
 package com.campus.service.user;
 
+import com.campus.dto.*;
 import com.dto.*;
-import com.entity.ShopOrder;
-import com.result.PageResult;
-import com.vo.BossVo;
-import com.vo.CommodityVo;
+import com.campus.entity.ShopOrder;
+import com.campus.result.PageResult;
+import com.campus.vo.BossVo;
+import com.campus.vo.CommodityVo;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,10 @@
 package com.campus.service.admin;
 
-import com.dto.AdminBossPageDto;
-import com.dto.AdminBossSaveDto;
-import com.dto.AdminBossUpdateDto;
-import com.entity.Boss;
-import com.result.PageResult;
+import com.campus.dto.AdminBossPageDto;
+import com.campus.dto.AdminBossSaveDto;
+import com.campus.dto.AdminBossUpdateDto;
+import com.campus.entity.Boss;
+import com.campus.result.PageResult;
 
 public interface AdminBossService {
     /**

@@ -1,7 +1,7 @@
 package com.campus.handler;
 
-import com.exception.BaseException;
-import com.result.Result;
+import com.campus.exception.BaseException;
+import com.campus.result.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

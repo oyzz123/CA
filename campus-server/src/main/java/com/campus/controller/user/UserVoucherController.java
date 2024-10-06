@@ -1,7 +1,7 @@
 package com.campus.controller.user;
 
 import com.campus.service.user.UserVoucherService;
-import com.result.Result;
+import com.campus.result.Result;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,11 +1,8 @@
 package com.campus.service.admin;
 
-import com.dto.AdminLoginDto;
-import com.dto.AdminUpdateDto;
-import com.dto.LoginDto;
-import com.entity.Admin;
-
-import javax.security.auth.login.AccountNotFoundException;
+import com.campus.dto.AdminUpdateDto;
+import com.campus.dto.LoginDto;
+import com.campus.entity.Admin;
 
 public interface AdminService {
     /**

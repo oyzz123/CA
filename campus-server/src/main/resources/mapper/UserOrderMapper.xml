@@ -11,7 +11,7 @@
         where id = #{id}
     </update>
 
-    <select id="showOrder" resultType="com.vo.OrderVo">
+    <select id="showOrder" resultType="com.campus.vo.OrderVo">
         SELECT
         takeaway_order.id,
         takeaway_order.address_start,

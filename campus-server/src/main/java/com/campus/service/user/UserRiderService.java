@@ -1,9 +1,9 @@
 package com.campus.service.user;
 
-import com.dto.OrderPageDto;
-import com.dto.RiderAcceptOrderDto;
-import com.dto.RiderRefundOrderDto;
-import com.result.PageResult;
+import com.campus.dto.OrderPageDto;
+import com.campus.dto.RiderAcceptOrderDto;
+import com.campus.dto.RiderRefundOrderDto;
+import com.campus.result.PageResult;
 
 public interface UserRiderService {
     void acceptOrder(RiderAcceptOrderDto riderAcceptOrderDto);

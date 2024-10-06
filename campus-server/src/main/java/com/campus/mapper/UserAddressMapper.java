@@ -1,7 +1,7 @@
 package com.campus.mapper;
 
-import com.entity.UserAddress;
-import com.vo.UserAddressVo;
+import com.campus.entity.UserAddress;
+import com.campus.vo.UserAddressVo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

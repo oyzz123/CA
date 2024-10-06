@@ -1,7 +1,7 @@
 package com.campus.mapper;
 
-import com.dto.VoucherDto;
-import com.entity.Voucher;
+import com.campus.dto.VoucherDto;
+import com.campus.entity.Voucher;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;

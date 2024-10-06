@@ -1,7 +1,7 @@
 package com.campus.config;
 
 import com.campus.properties.AliOssProperties;
-import com.utils.AliOssUtil;
+import com.campus.utils.AliOssUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;

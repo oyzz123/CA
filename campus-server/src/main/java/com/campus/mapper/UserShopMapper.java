@@ -1,15 +1,14 @@
 package com.campus.mapper;
 
-import com.campus.annotation.AutoFill;
-import com.dto.CommodityPageDto;
-import com.dto.OrderCommodityVo;
-import com.dto.OrderPageDto;
+import com.campus.dto.CommodityPageDto;
+import com.campus.dto.OrderCommodityVo;
+import com.campus.dto.OrderPageDto;
+import com.campus.entity.*;
 import com.entity.*;
-import com.enumeration.OperationType;
 import com.github.pagehelper.Page;
-import com.vo.BossVo;
-import com.vo.CommodityVo;
-import com.vo.UserShopOrderVo;
+import com.campus.vo.BossVo;
+import com.campus.vo.CommodityVo;
+import com.campus.vo.UserShopOrderVo;
 import org.apache.ibatis.annotations.*;
 
 import java.util.ArrayList;

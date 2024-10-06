@@ -1,18 +1,17 @@
 package com.campus.controller.user;
 
+import com.campus.dto.*;
 import com.campus.service.boss.BossService;
 import com.campus.service.user.UserShopService;
 import com.dto.*;
-import com.entity.Commodity;
-import com.entity.ShopOrder;
-import com.result.PageResult;
-import com.result.Result;
-import com.vo.BossVo;
-import com.vo.CommodityVo;
+import com.campus.entity.ShopOrder;
+import com.campus.result.PageResult;
+import com.campus.result.Result;
+import com.campus.vo.BossVo;
+import com.campus.vo.CommodityVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

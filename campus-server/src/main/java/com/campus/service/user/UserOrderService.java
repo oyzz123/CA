@@ -1,9 +1,9 @@
 package com.campus.service.user;
 
-import com.dto.OrderPageDto;
-import com.dto.RefundOrderDto;
-import com.dto.UserOrderDto;
-import com.result.PageResult;
+import com.campus.dto.OrderPageDto;
+import com.campus.dto.RefundOrderDto;
+import com.campus.dto.UserOrderDto;
+import com.campus.result.PageResult;
 
 public interface UserOrderService {
     Integer submit(UserOrderDto userOrderDto);

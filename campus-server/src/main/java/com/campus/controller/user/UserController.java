@@ -1,10 +1,10 @@
 package com.campus.controller.user;
 
 import com.campus.service.user.impl.UserServiceImpl;
-import com.dto.RechargeDto;
-import com.dto.UserDto;
-import com.entity.User;
-import com.result.Result;
+import com.campus.dto.RechargeDto;
+import com.campus.dto.UserDto;
+import com.campus.entity.User;
+import com.campus.result.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

@@ -16,7 +16,7 @@
 <!--        <result column="update_time" property="updateTime"/>-->
 <!--    </resultMap>-->
 
-    <select id="pageQuery" resultType="com.entity.User">
+    <select id="pageQuery" resultType="com.campus.entity.User">
         select * from user
         <where>
             <if test="nickname!=null and nickname!=''">

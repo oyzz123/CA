@@ -2,11 +2,11 @@ package com.campus.service.admin.impl;
 
 import com.campus.mapper.AdminMapper;
 import com.campus.service.admin.AdminService;
-import com.dto.AdminUpdateDto;
-import com.dto.LoginDto;
-import com.entity.Admin;
-import com.exception.AccountNotFoundException;
-import com.exception.PasswordErrorException;
+import com.campus.dto.AdminUpdateDto;
+import com.campus.dto.LoginDto;
+import com.campus.entity.Admin;
+import com.campus.exception.AccountNotFoundException;
+import com.campus.exception.PasswordErrorException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

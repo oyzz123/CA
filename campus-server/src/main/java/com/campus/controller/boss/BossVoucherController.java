@@ -1,10 +1,9 @@
 package com.campus.controller.boss;
 
 import com.campus.service.boss.BossVoucherService;
-import com.dto.VoucherDto;
-import com.result.Result;
+import com.campus.dto.VoucherDto;
+import com.campus.result.Result;
 import io.swagger.annotations.Api;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
